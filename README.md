@@ -50,6 +50,7 @@ dataset_onehot = pd.concat([dataset,genre_onehot,company_onehot,cast_onehot],axi
 ![](https://i.imgur.com/3GVd4Wg.png)
 ### 3. 電影成本分布
 ![](https://i.imgur.com/i1mH8ze.png)
+
 還有很多其他的圖表，但我這邊就放幾個比較重要的就好。
 
 
@@ -74,6 +75,7 @@ validation我一樣選擇用Kfold，K = 3下去跑，但這次我是將剛剛分
 最後得到的結果如下圖
 
 ![](https://i.imgur.com/FSSUBHO.png)
+
 所以最後用gamma = 1下去跑，將最一開始的步驟得到的training set(包括validation set)整個丟進去fit，然後用test set計算它的performance。
 
 ## VI. Results
@@ -94,12 +96,15 @@ validation我一樣選擇用Kfold，K = 3下去跑，但這次我是將剛剛分
 
 ## VII. Conclusion
 最終，我們如果透過Random Forest去預估，可以穩定的得到高達八成的準確率。在使用上，我們只要將電影中下列除了Revenue以及Revenue Level以外的所有資訊都丟進去我們的model，就能夠預估出他的Revenue Level。
+
 ![](https://i.imgur.com/lBkgdms.png)
 
 舉例來說，假如我們今天要預測 "Harry Potter 20th Anniversary: Return to Hogwarts " 這部2022年上印的電影的票房，我們可以先透過TMDB 的 api抓下我們所有需要的資料，如下圖所示。
+
 ![](https://i.imgur.com/iQJZvIw.png)
 之後我們再將這筆data跟我們所有的dataset做one hot以及label encode，轉換成最終我們需要的DataFrame內容。再丟入我們的model，就可以得到他預測出來的Revenue Level了。至於上映的季節，也可以透過更改data中 "Season"這個Feature，重新label encode，就能夠比較出predict出來的Revenue，選擇較適當的上映季節。
 以我們的 " Harry Potter 20th Anniversary: Return to Hogwarts "為例，我們可以看到預測的結果，春天、秋天、以及冬天預測出來的票房都是A，夏天則是F，那電影的製片商就可以從剩下三個季節去做上映日期的選擇了。
+
 ![](https://i.imgur.com/R47tMsp.png)
 當然除了季節以外，還有許多的Feature可以去做嘗試，但做法雷同，這邊就不再贅述了。
 最終，我們得到我們想要的預測，完成了這項Project。
