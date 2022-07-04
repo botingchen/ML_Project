@@ -1,4 +1,3 @@
-# TMDB-Box-Office Prediction
 # Movie's Box Office Revenue Prediction
 ## I. Introduction
 電影產業已經在人類社會中存在了長久的一段時間了。雖然不如股價、近年火紅的虛擬貨幣等常有爆炸性的成長或下跌，但它的產值也是正在逐年提升。電影儼然成為了人類生活娛樂中不可或缺的一部分。
