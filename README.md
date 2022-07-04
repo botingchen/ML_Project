@@ -37,6 +37,7 @@ dataset_onehot = pd.concat([dataset,genre_onehot,company_onehot,cast_onehot],axi
 最後可以看到我們classification還算是蠻理想的。
 
 ![](https://i.imgur.com/05JsjLL.png)
+
 ![](https://i.imgur.com/LY8A3R0.png)
 
 ## IV. Data Visualization
