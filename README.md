@@ -106,6 +106,7 @@ validation我一樣選擇用Kfold，K = 3下去跑，但這次我是將剛剛分
 以我們的 " Harry Potter 20th Anniversary: Return to Hogwarts "為例，我們可以看到預測的結果，春天、秋天、以及冬天預測出來的票房都是A，夏天則是F，那電影的製片商就可以從剩下三個季節去做上映日期的選擇了。
 
 ![](https://i.imgur.com/R47tMsp.png)
+
 當然除了季節以外，還有許多的Feature可以去做嘗試，但做法雷同，這邊就不再贅述了。
 最終，我們得到我們想要的預測，完成了這項Project。
 
