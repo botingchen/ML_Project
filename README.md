@@ -35,6 +35,7 @@ dataset_onehot = pd.concat([dataset,genre_onehot,company_onehot,cast_onehot],axi
 ```
 5. 最後的preprocessing是我做完之後才決定在加的。因為我原本是做數值的預測，但後來覺得這樣的預測結果太大膽了，我不如將收入分成數個區間，預測會在哪個區間。所以決定根據電影的收入分成ABCDEF六個區間，F代表虧錢，E是0 ~ 10000000，D是10000000 ~ 50000000，以此類推。
 最後可以看到我們classification還算是蠻理想的。
+
 ![](https://i.imgur.com/05JsjLL.png)
 ![](https://i.imgur.com/LY8A3R0.png)
 
