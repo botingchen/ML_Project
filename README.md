@@ -44,6 +44,7 @@ dataset_onehot = pd.concat([dataset,genre_onehot,company_onehot,cast_onehot],axi
 我有做幾個簡單的Data Visualization，方便更加了解資料的分布或是相關性等。
 ### 1. 不同類型電影的票房
 可以看到最賣座的前三名分別是adventure, action, fantasy。
+
 ![](https://i.imgur.com/DL8J4hZ.png)
 ### 2. 不同季節的電影票房
 ![](https://i.imgur.com/3GVd4Wg.png)
@@ -71,17 +72,21 @@ validation我一樣選擇用Kfold，K = 3下去跑。
 validation我一樣選擇用Kfold，K = 3下去跑，但這次我是將剛剛分完的training set丟入，再分割成trainig set跟validation set。
 那為了找到best hyperparameter，我將gamma用0.1,1,100帶入grid search去計算。
 最後得到的結果如下圖
+
 ![](https://i.imgur.com/FSSUBHO.png)
 所以最後用gamma = 1下去跑，將最一開始的步驟得到的training set(包括validation set)整個丟進去fit，然後用test set計算它的performance。
 
 ## VI. Results
 ### 這是Random Forest(n_estimators = 100)的performance
+
 ![](https://i.imgur.com/XfHm9En.png)
 
 ### 這是Decision Tree(class_weight="balanced,max_depth = 40")的performance
+
 ![](https://i.imgur.com/WDFDKaG.png)
 
 ### 這是SVM(kernel = "rbf",gamma = 1)的performance
+
 ![](https://i.imgur.com/56CL39M.png)
 
 
